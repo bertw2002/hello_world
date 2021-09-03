@@ -15,18 +15,20 @@ export class AppComponent {
     this.num3=this.num1*this.num2;
     //(this.arr_num).push(this.num3);
     this.arr_num=[... this.arr_num, this.num3];
-    console.log(this.arr_num);
   }
   add(){
     this.num3=this.num1+this.num2;
     //this.arr_num.push(this.num3);
+    this.arr_num=[... this.arr_num, this.num3];
   }
   subtract(){
     this.num3=this.num1-this.num2;
     //this.arr_num.push(this.num3);
+    this.arr_num=[... this.arr_num, this.num3];
   }
   divide(){
     this.num3=this.num1/this.num2;
     //this.arr_num.push(this.num3);
+    this.arr_num=[... this.arr_num, this.num3];
   }
 }
