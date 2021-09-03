@@ -1,15 +1,26 @@
-<div>
-<h1>
-  Calculator
-</h1>
-<input type='number' name='num1'[(ngModel)]='num1'>
-<input type='number' name='num2'[(ngModel)]='num2'>
-<br>
-<button (click)="subtract()">Subtract</button>
-<button (click)="add()">Add</button>
-<button (click)="multiply()">Multiply</button>
-<button (click)="divide()">Divide</button>
-<br>
-</div>
-<h2> Answer: {{arr_num}} </h2>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+</head>
+<body>
+  <div class="header">
+    <h1>Calculator</h1>
+  </div>
+  <div class="main">
+    <input type='number' name='num1'[(ngModel)]='num1'>
+    <input type='number' name='num2'[(ngModel)]='num2'>
+    <br>
+    <button (click)="subtract()">Subtract</button>
+    <button (click)="add()">Add</button>
+    <button (click)="multiply()">Multiply</button>
+    <button (click)="divide()">Divide</button>
+    <br>
+    <h2> Answer: {{arr_num}} </h2>
+  </div>
+</body>
+</html>
+
+
 <router-outlet></router-outlet>
