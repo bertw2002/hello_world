@@ -9,13 +9,14 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'hello-angular';
   public arr1:string[]=[];
-  public switch=false;
+  public arr2:string[]=[];
+  public secondOp=false;
   public num1:number;
   public num2:number;
   public num3:number;
   public arr_num:number[] = [];
   add0(){
-    if (switch){
+    if (this.secondOp){
       this.arr2=[... this.arr2, "0"];
     }
     else{
@@ -23,7 +24,7 @@ export class AppComponent {
     }
   }
   add1(){
-    if (switch){
+    if (this.secondOp){
       this.arr2=[... this.arr2, "1"];
     }
     else{
@@ -31,7 +32,7 @@ export class AppComponent {
     }
   }
   add2(){
-    if (switch){
+    if (this.secondOp){
       this.arr2=[... this.arr2, "2"];
     }
     else{
@@ -39,7 +40,7 @@ export class AppComponent {
     }
   }
   add3(){
-    if (switch){
+    if (this.secondOp){
       this.arr2=[... this.arr2, "3"];
     }
     else{
@@ -47,7 +48,7 @@ export class AppComponent {
     }
   }
   add4(){
-    if (switch){
+    if (this.secondOp){
       this.arr2=[... this.arr2, "4"];
     }
     else{
@@ -55,7 +56,7 @@ export class AppComponent {
     }
   }
   add5(){
-    if (switch){
+    if (this.secondOp){
       this.arr2=[... this.arr2, "5"];
     }
     else{
@@ -63,13 +64,13 @@ export class AppComponent {
     }
   }
   add6(){
-    if (switch){
+    if (this.secondOp){
       this.arr2=[... this.arr2, "6"];
     }
     else{this.arr1=[... this.arr1, "6"];}
   }
   add7(){
-    if (switch){
+    if (this.secondOp){
       this.arr2=[... this.arr2, "7"];
     }
     else{
@@ -77,7 +78,7 @@ export class AppComponent {
     }
   }
   add8(){
-    if (switch){
+    if (this.secondOp){
       this.arr2=[... this.arr2, "8"];
     }
     else{
@@ -85,7 +86,7 @@ export class AppComponent {
     }
   }
   add9(){
-    if (switch){
+    if (this.secondOp){
       this.arr2=[... this.arr2, "9"];
     }
     else{
@@ -99,7 +100,7 @@ export class AppComponent {
     if (len!=0) {
       if (this.arr1[len-1]!="+" && this.arr1[len-1]!="/" && this.arr1[len-1]!="*" && this.arr1[len-1]!="-") {
         this.arr1=[... this.arr1, "-"];
-        this.switch=true;
+        this.secondOp=true;
       }
     }
   }
@@ -108,7 +109,7 @@ export class AppComponent {
     if (len!=0) {
       if (this.arr1[len-1]!="+" && this.arr1[len-1]!="/" && this.arr1[len-1]!="*" && this.arr1[len-1]!="-") {
         this.arr1=[... this.arr1, "/"];
-        this.switch=true;
+        this.secondOp=true;
       }
     }
   }
@@ -117,7 +118,7 @@ export class AppComponent {
     if (len!=0) {
       if (this.arr1[len-1]!="+" && this.arr1[len-1]!="/" && this.arr1[len-1]!="*" && this.arr1[len-1]!="-") {
         this.arr1=[... this.arr1, "+"];
-        this.switch=true;
+        this.secondOp=true;
       }
     }
   }
@@ -126,7 +127,7 @@ export class AppComponent {
     if (len!=0) {
       if (this.arr1[len-1]!="+" && this.arr1[len-1]!="/" && this.arr1[len-1]!="*" && this.arr1[len-1]!="-") {
         this.arr1=[... this.arr1, "*"];
-        this.switch=true;
+        this.secondOp=true;
       }
     }
   }
