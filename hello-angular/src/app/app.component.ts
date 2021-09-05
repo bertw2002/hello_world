@@ -8,128 +8,107 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'hello-angular';
-  public arr1:string[]=[];
-  public arr2:string[]=[];
   public secondOp=false;
-  public num1:number;
-  public num2:number;
+  public operator:string;
+  public num1=0;
+  public num2=0;
   public num3:number;
   public arr_num:number[] = [];
   add0(){
     if (this.secondOp){
-      this.arr2=[... this.arr2, "0"];
+      this.num2=this.num2*10;
     }
     else{
-      this.arr1=[... this.arr1, "0"];
+      this.num1=this.num1*10;
     }
   }
   add1(){
     if (this.secondOp){
-      this.arr2=[... this.arr2, "1"];
+      this.num2=this.num2*10+1;
     }
     else{
-      this.arr1=[... this.arr1, "1"];
+      this.num1=this.num1*10+1;
     }
   }
   add2(){
     if (this.secondOp){
-      this.arr2=[... this.arr2, "2"];
+      this.num2=this.num2*10+2;
     }
     else{
-      this.arr1=[... this.arr1, "2"];
+      this.num1=this.num1*10+2;
     }
   }
   add3(){
     if (this.secondOp){
-      this.arr2=[... this.arr2, "3"];
+      this.num2=this.num2*10+3;
     }
     else{
-      this.arr1=[... this.arr1, "3"];
+      this.num1=this.num1*10+3;
     }
   }
   add4(){
     if (this.secondOp){
-      this.arr2=[... this.arr2, "4"];
+      this.num2=this.num2*10+4;
     }
     else{
-      this.arr1=[... this.arr1, "4"];
+      this.num1=this.num1*10+4;
     }
   }
   add5(){
     if (this.secondOp){
-      this.arr2=[... this.arr2, "5"];
+      this.num2=this.num2*10+5;
     }
     else{
-      this.arr1=[... this.arr1, "5"];
+      this.num1=this.num1*10+5;
     }
   }
   add6(){
     if (this.secondOp){
-      this.arr2=[... this.arr2, "6"];
+      this.num2=this.num2*10+6;
     }
-    else{this.arr1=[... this.arr1, "6"];}
+    else{
+      this.num1=this.num1*10+6;
+    }
   }
   add7(){
     if (this.secondOp){
-      this.arr2=[... this.arr2, "7"];
+      this.num2=this.num2*10+7;
     }
     else{
-      this.arr1=[... this.arr1, "7"];
+      this.num1=this.num1*10+7;
     }
   }
   add8(){
     if (this.secondOp){
-      this.arr2=[... this.arr2, "8"];
+      this.num2=this.num2*10+8;
     }
     else{
-      this.arr1=[... this.arr1, "8"];
+      this.num1=this.num1*10+8;
     }
   }
   add9(){
     if (this.secondOp){
-      this.arr2=[... this.arr2, "9"];
+      this.num2=this.num2*10+9;
     }
     else{
-      this.arr1=[... this.arr1, "9"];
+      this.num1=this.num1*10+9;
     }
-    console.log(this.arr1);
-    console.log(this.arr2);
   }
   addSub(){
-    let len=this.arr1.length;
-    if (len!=0) {
-      if (this.arr1[len-1]!="+" && this.arr1[len-1]!="/" && this.arr1[len-1]!="*" && this.arr1[len-1]!="-") {
-        this.arr1=[... this.arr1, "-"];
-        this.secondOp=true;
-      }
-    }
+    this.operator="-";
+    this.secondOp=true;
   }
   addDiv(){
-    let len=this.arr1.length;
-    if (len!=0) {
-      if (this.arr1[len-1]!="+" && this.arr1[len-1]!="/" && this.arr1[len-1]!="*" && this.arr1[len-1]!="-") {
-        this.arr1=[... this.arr1, "/"];
-        this.secondOp=true;
-      }
-    }
+    this.operator="/";
+    this.secondOp=true;
   }
   addAdd(){
-    let len=this.arr1.length;
-    if (len!=0) {
-      if (this.arr1[len-1]!="+" && this.arr1[len-1]!="/" && this.arr1[len-1]!="*" && this.arr1[len-1]!="-") {
-        this.arr1=[... this.arr1, "+"];
-        this.secondOp=true;
-      }
-    }
+    this.operator="+";
+    this.secondOp=true;
   }
   addMult(){
-    let len=this.arr1.length;
-    if (len!=0) {
-      if (this.arr1[len-1]!="+" && this.arr1[len-1]!="/" && this.arr1[len-1]!="*" && this.arr1[len-1]!="-") {
-        this.arr1=[... this.arr1, "*"];
-        this.secondOp=true;
-      }
-    }
+    this.operator="*";
+    this.secondOp=true;
   }
   multiply(){
     this.num3=this.num1*this.num2;
@@ -150,5 +129,27 @@ export class AppComponent {
     this.num3=this.num1/this.num2;
     //this.arr_num.push(this.num3);
     this.arr_num=[... this.arr_num, this.num3];
+  }
+  calculate(){
+    if (this.operator=="null"){
+      return;
+    }
+    if (this.operator=="-"){
+      this.num3=this.num1-this.num2;
+    }
+    if (this.operator=="+"){
+      this.num3=this.num1+this.num2;
+    }
+    if (this.operator=="*"){
+      this.num3=this.num1*this.num2;
+    }
+    if (this.operator=="/"){
+      this.num3=this.num1/this.num2;
+    }
+    this.arr_num=[... this.arr_num, this.num3];
+    this.num1=0;
+    this.num2=0;
+    this.secondOp=false;
+    this.operator="null";
   }
 }
