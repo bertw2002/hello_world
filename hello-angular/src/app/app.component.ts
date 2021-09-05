@@ -9,56 +9,126 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'hello-angular';
   public arr1:string[]=[];
+  public switch=false;
   public num1:number;
   public num2:number;
   public num3:number;
   public arr_num:number[] = [];
   add0(){
-    this.arr1=[... this.arr1, "0"];
+    if (switch){
+      this.arr2=[... this.arr2, "0"];
+    }
+    else{
+      this.arr1=[... this.arr1, "0"];
+    }
   }
   add1(){
-    this.arr1=[... this.arr1, "1"];
+    if (switch){
+      this.arr2=[... this.arr2, "1"];
+    }
+    else{
+      this.arr1=[... this.arr1, "1"];
+    }
   }
   add2(){
-    this.arr1=[... this.arr1, "2"];
+    if (switch){
+      this.arr2=[... this.arr2, "2"];
+    }
+    else{
+      this.arr1=[... this.arr1, "2"];
+    }
   }
   add3(){
-    this.arr1=[... this.arr1, "3"];
+    if (switch){
+      this.arr2=[... this.arr2, "3"];
+    }
+    else{
+      this.arr1=[... this.arr1, "3"];
+    }
   }
   add4(){
-    this.arr1=[... this.arr1, "4"];
+    if (switch){
+      this.arr2=[... this.arr2, "4"];
+    }
+    else{
+      this.arr1=[... this.arr1, "4"];
+    }
   }
   add5(){
-    this.arr1=[... this.arr1, "5"];
+    if (switch){
+      this.arr2=[... this.arr2, "5"];
+    }
+    else{
+      this.arr1=[... this.arr1, "5"];
+    }
   }
   add6(){
-    this.arr1=[... this.arr1, "6"];
+    if (switch){
+      this.arr2=[... this.arr2, "6"];
+    }
+    else{this.arr1=[... this.arr1, "6"];}
   }
   add7(){
-    this.arr1=[... this.arr1, "7"];
+    if (switch){
+      this.arr2=[... this.arr2, "7"];
+    }
+    else{
+      this.arr1=[... this.arr1, "7"];
+    }
   }
   add8(){
-    this.arr1=[... this.arr1, "8"];
+    if (switch){
+      this.arr2=[... this.arr2, "8"];
+    }
+    else{
+      this.arr1=[... this.arr1, "8"];
+    }
   }
   add9(){
-    this.arr1=[... this.arr1, "9"];
+    if (switch){
+      this.arr2=[... this.arr2, "9"];
+    }
+    else{
+      this.arr1=[... this.arr1, "9"];
+    }
+    console.log(this.arr1);
+    console.log(this.arr2);
   }
   addSub(){
-    if (this.arr1.length!=0) {
-      if (this.arr1[-1]!="+" || this.arr1[-1]!="/" || this.arr1[-1]!="*") {
+    let len=this.arr1.length;
+    if (len!=0) {
+      if (this.arr1[len-1]!="+" && this.arr1[len-1]!="/" && this.arr1[len-1]!="*" && this.arr1[len-1]!="-") {
         this.arr1=[... this.arr1, "-"];
+        this.switch=true;
       }
-
     }
   }
   addDiv(){
-    this.arr1=[... this.arr1, "/"];
+    let len=this.arr1.length;
+    if (len!=0) {
+      if (this.arr1[len-1]!="+" && this.arr1[len-1]!="/" && this.arr1[len-1]!="*" && this.arr1[len-1]!="-") {
+        this.arr1=[... this.arr1, "/"];
+        this.switch=true;
+      }
+    }
   }
   addAdd(){
-    this.arr1=[... this.arr1, "+"];
+    let len=this.arr1.length;
+    if (len!=0) {
+      if (this.arr1[len-1]!="+" && this.arr1[len-1]!="/" && this.arr1[len-1]!="*" && this.arr1[len-1]!="-") {
+        this.arr1=[... this.arr1, "+"];
+        this.switch=true;
+      }
+    }
   }
   addMult(){
-    this.arr1=[... this.arr1, "*"];
+    let len=this.arr1.length;
+    if (len!=0) {
+      if (this.arr1[len-1]!="+" && this.arr1[len-1]!="/" && this.arr1[len-1]!="*" && this.arr1[len-1]!="-") {
+        this.arr1=[... this.arr1, "*"];
+        this.switch=true;
+      }
+    }
   }
   multiply(){
     this.num3=this.num1*this.num2;
