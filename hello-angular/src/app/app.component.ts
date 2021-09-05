@@ -5,12 +5,18 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   title = 'hello-angular';
+  public arr1:number[]=[];
   public num1:number;
   public num2:number;
   public num3:number;
   public arr_num:number[] = [];
+  add0(x: number){
+    this.arr1=[... this.arr1, x]
+  }
+
   multiply(){
     this.num3=this.num1*this.num2;
     //(this.arr_num).push(this.num3);

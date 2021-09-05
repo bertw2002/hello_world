@@ -9,13 +9,26 @@
     <h1>Calculator</h1>
   </div>
   <div class="main">
-    <input type='number' name='num1'[(ngModel)]='num1'>
-    <input type='number' name='num2'[(ngModel)]='num2'>
+    <input type='number' name='num1' id='input1' [(ngModel)]='num1'>
+    <input type='number' name='num2' id='input2' [(ngModel)]='num2'>
     <br>
-    <button (click)="subtract()">Subtract</button>
-    <button (click)="add()">Add</button>
-    <button (click)="multiply()">Multiply</button>
-    <button (click)="divide()">Divide</button>
+    <div class="calcButtons">
+      <button type='button' onclick="add0()">0</button>
+      <button type='button' onclick="add1()">1</button>
+      <button type='button' onclick="add2()">2</button>
+      <button type='button' onclick="add3()">3</button>
+      <button type='button' onclick="add4()">4</button>
+      <button type='button' onclick="add5()">5</button>
+      <button type='button' onclick="add6()">6</button>
+      <button type='button' onclick="add7()">7</button>
+      <button type='button' onclick="add8()">8</button>
+      <button type='button' onclick="add9()">9</button>
+
+      <button type='button' (click)="addSub()">Subtract</button>
+      <button type='button' (click)="addAdd()">Add</button>
+      <button type='button' (click)="addMult()">Multiply</button>
+      <button type='button' (click)="addDiv()">Divide</button>
+    </div>
     <br>
     <h2> Answer: {{arr_num}} </h2>
   </div>
