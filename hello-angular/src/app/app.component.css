@@ -1,4 +1,5 @@
 .header {
+  text-align: center;
   background-color: #7e9a9a;
   top: 0;
   position: fixed;
@@ -22,10 +23,31 @@
   padding: 16px;
 }
 
-#input1 {
+#box {
+  width: 500px;
+  height: 45px;
+  position: absolute;
 
+  left: 30%;
+  border: 5px solid gray;
+  margin: 0;
+  text-align: center;
 }
 
-button {
+#box1 {
+  width: 468px;
+  height: 200px;
+  position: absolute;
 
+  left: 30%;
+  top: 140%;
+  border: 5px solid gray;
+  margin: 0;
+  text-align: center;
+}
+
+#answer {
+  position:absolute;
+  top: 700px;
+  right: 650px;
 }

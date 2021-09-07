@@ -1,0 +1,26 @@
+.container{
+  background-color: salmon;
+  max-width: 500px;
+}
+
+.aHeader{
+  background-color: teal;
+  padding:10px;
+  cursor: pointer;
+}
+.aHeader:hover{
+  background-color: lightgreen;
+}
+
+.abody{
+  padding:10px;
+  overflow: hidden;
+}
+
+*{
+  font-family: sans-serif;
+}
+
+::ng-deep p{
+  margin: 0;
+}

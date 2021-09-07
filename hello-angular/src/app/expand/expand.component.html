@@ -1,0 +1,8 @@
+<div class="container">
+  <div class="aHeader" (click)="expandToggle()">
+    Answer List:
+  </div>
+  <div class="aBody" [@panelState]="contract">
+    <ng-content> </ng-content>
+  </div>
+</div>

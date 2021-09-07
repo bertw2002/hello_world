@@ -8,10 +8,10 @@
   <div class="header">
     <h1>Calculator</h1>
   </div>
-  <div class="main">
-    <h2>{{num1}}</h2><h2>{{num2}}</h2>
+  <div style="text-align:center" class="main">
+    <h2 id="box">{{numDisplay}}</h2>
     <br>
-    <div class="calcButtons">
+    <div id="box1" class="calcButtons">
 
       <button type='button' (click)="add1()">1</button>
       <button type='button' (click)="add2()">2</button>
@@ -30,7 +30,9 @@
       <button type='button' (click)="calculate()">=</button>
     </div>
     <br>
-    <h2> Answer: {{arr_num}} </h2>
+    <app-expand>
+      <p>{{arr_num_display}}</p>
+    </app-expand>
   </div>
 </body>
 </html>
