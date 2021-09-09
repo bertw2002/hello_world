@@ -9,6 +9,10 @@
   z-index:2;
 }
 
+.text {
+  white-space:pre-wrap;
+}
+
 .main {
   z-index: 1;
   position: relative;

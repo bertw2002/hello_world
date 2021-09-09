@@ -1,20 +1,24 @@
 .container{
   background-color: salmon;
-  max-width: 500px;
+  position: absolute;
+  top: 750px;
+  right: 0;
+  width: 100%;
+  font-size: 50px;
 }
 
 .aHeader{
-  background-color: teal;
+  background-color: #7e9a9a;
   padding:10px;
   cursor: pointer;
 }
+
 .aHeader:hover{
   background-color: lightgreen;
 }
 
 .abody{
   padding:10px;
-  overflow: hidden;
 }
 
 *{
@@ -22,5 +26,5 @@
 }
 
 ::ng-deep p{
-  margin: 0;
+  margin: 30px;
 }

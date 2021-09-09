@@ -21,7 +21,7 @@ export class AppComponent {
   public numDisplay=0;
   public num3:number;
   public arr_num:number[] = [];
-  public arr_num_display:string="";
+  public arr_num_display:string[]=[];
   add0(){
     if (this.secondOp){
       this.num2=this.num2*10;
@@ -168,9 +168,9 @@ export class AppComponent {
     this.num2=0;
     this.secondOp=false;
     this.operator="null";
+    this.arr_num_display.push(String(this.arr_num[this.arr_num.length - 1]));
+    this.arr_num_display.push("\n","\n");
+    console.log(this.arr_num_display);
   }
 
-
-  expand(){
-  }
 }
