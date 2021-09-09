@@ -27,6 +27,12 @@
   padding: 16px;
 }
 
+#sort {
+  position:absolute;
+  top: 600px;
+  left: 0;
+}
+
 #box {
   width: 500px;
   height: 45px;

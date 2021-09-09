@@ -21,7 +21,6 @@ export class AppComponent {
   public numDisplay=0;
   public num3:number;
   public arr_num:number[] = [];
-  public arr_num_display:string[]=[];
   add0(){
     if (this.secondOp){
       this.num2=this.num2*10;
@@ -164,13 +163,35 @@ export class AppComponent {
     }
     this.numDisplay=this.num3;
     this.arr_num=[... this.arr_num, this.num3];
+    console.log(this.arr_num);
     this.num1=0;
     this.num2=0;
     this.secondOp=false;
     this.operator="null";
-    this.arr_num_display.push(String(this.arr_num[this.arr_num.length - 1]));
-    this.arr_num_display.push("\n","\n");
-    console.log(this.arr_num_display);
   }
+
+  selectionSort(){
+    let new_arr:number[]=[];
+    new_arr=this.arr_num;
+    for (let i = 0; i < new_arr.length;i++){
+        //create the minimum number with the first loop.
+        let minNum = new_arr[i];
+        let minIndex = i;
+        for (let c = i+1; c < new_arr.length; c++){
+            //find the new minimum
+            if (minNum > new_arr[c]){
+                minIndex = c;
+                minNum = new_arr[c];
+            }
+        }
+        //switch current minimum with new minimum.
+        let numTemp = new_arr[i];
+        new_arr[i]=minNum;
+        new_arr[minIndex]=numTemp;
+        this.arr_num=new_arr;
+    }
+    console.log(this.arr_num);
+}
+
 
 }
