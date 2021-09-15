@@ -171,24 +171,21 @@ export class AppComponent {
   }
 
   selectionSort(){
-    let new_arr:number[]=[];
-    new_arr=this.arr_num;
-    for (let i = 0; i < new_arr.length;i++){
+    for (let i = 0; i < this.arr_num.length;i++){
         //create the minimum number with the first loop.
-        let minNum = new_arr[i];
+        let minNum = this.arr_num[i];
         let minIndex = i;
-        for (let c = i+1; c < new_arr.length; c++){
+        for (let c = i+1; c < this.arr_num.length; c++){
             //find the new minimum
-            if (minNum > new_arr[c]){
+            if (minNum > this.arr_num[c]){
                 minIndex = c;
-                minNum = new_arr[c];
+                minNum = this.arr_num[c];
             }
         }
         //switch current minimum with new minimum.
-        let numTemp = new_arr[i];
-        new_arr[i]=minNum;
-        new_arr[minIndex]=numTemp;
-        this.arr_num=new_arr;
+        let numTemp = this.arr_num[i];
+        this.arr_num[i]=minNum;
+        this.arr_num[minIndex]=numTemp;
     }
     console.log(this.arr_num);
 }
