@@ -1,7 +1,9 @@
 import { Component, Input } from '@angular/core';
 @Component ({
   selector: 'app-comp',
-  templateUrl: './comp.component.html',
+  template:`<h1> parent component </h1>
+  <app-compChild></app-compChild>
+  `
 })
 
 export class comp {
