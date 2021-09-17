@@ -1,6 +1,9 @@
 import { Component} from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import {Router} from '@angular/router'
+import {Router} from '@angular/router';
+import { ParentComponent } from './parent/parent.component';
+import { NgModule } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
@@ -172,7 +175,7 @@ export class AppComponent {
     this.operator="null";
   }
   redirect(){
-    this.router.navigate(['/app']);
+    this.router.navigate(['Parent']);
   }
 
 }
