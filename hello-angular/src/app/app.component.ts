@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations';
+import {Router} from '@angular/router'
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,7 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 })
 
 export class AppComponent {
+  constructor(private router: Router){}
   title = 'hello-angular';
   public secondOp=false;
   public operator:string;
@@ -170,7 +172,7 @@ export class AppComponent {
     this.operator="null";
   }
   redirect(){
-    window.location.href = "comp/comp.component.html";
+    this.router.navigate(['/app']);
   }
 
 }
