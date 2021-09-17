@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import {ExpandComponent} from './expand/expand.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { CalculatorComponent } from './calculator/calculator.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { ChildComponent } from './child/child.component';
     ExpandComponent,
     ParentComponent,
     ChildComponent,
+    CalculatorComponent,
   ],
   imports: [
     BrowserModule,

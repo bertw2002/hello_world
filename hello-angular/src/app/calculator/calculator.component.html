@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+  <base href="/">
+</head>
+<body>
+  <div class="header">
+    <h1>Calculator</h1>
+  </div>
+  <div style="text-align:center" class="main">
+    <h2 id="box">{{numDisplay}}</h2>
+    <br>
+    <div id="box1" class="calcButtons">
+
+      <button type='button' (click)="add1()">1</button>
+      <button type='button' (click)="add2()">2</button>
+      <button type='button' (click)="add3()">3</button>
+      <button type='button' (click)="add4()">4</button>
+      <button type='button' (click)="add5()">5</button>
+      <button type='button' (click)="add6()">6</button>
+      <button type='button' (click)="add7()">7</button>
+      <button type='button' (click)="add8()">8</button>
+      <button type='button' (click)="add9()">9</button>
+      <button type='button' (click)="add0()">0</button>
+      <button type='button' (click)="addSub()">Subtract</button>
+      <button type='button' (click)="addAdd()">Add</button>
+      <button type='button' (click)="addMult()">Multiply</button>
+      <button type='button' (click)="addDiv()">Divide</button>
+      <button type='button' (click)="calculate()">=</button>
+    </div>
+
+    <br>
+    <app-expand>
+      <p style="white-space: pre-wrap;">{{arr_num}}</p>
+    </app-expand>
+  </div>
+</body>
+</html>
+
+
+<router-outlet></router-outlet>
