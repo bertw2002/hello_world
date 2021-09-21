@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -7,14 +7,16 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ChildComponent implements OnInit {
   dataChild:string[];
-  str='';
+  @Output() toParent = new EventEmitter();
   constructor() {
     this.dataChild=[];
   }
 
   addData(data: string){
     this.dataChild.push(data);
-    console.log(this.dataChild);
+  }
+  sendParent(){
+    this.toParent.emit(this.dataChild);
   }
   ngOnInit(): void {
   }

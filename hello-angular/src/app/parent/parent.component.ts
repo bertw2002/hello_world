@@ -8,6 +8,10 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ParentComponent implements OnInit {
   constructor() {
   }
+
+//  displayData(data: string[]) {
+//    console.log(data);
+//  }
   ngOnInit(): void {
   }
 
