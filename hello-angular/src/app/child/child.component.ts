@@ -6,9 +6,15 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./child.component.css']
 })
 export class ChildComponent implements OnInit {
-  @Input() dataChild:any;
-  @Input() str='';
+  dataChild:string[];
+  str='';
   constructor() {
+    this.dataChild=[];
+  }
+
+  addData(data: string){
+    this.dataChild.push(data);
+    console.log(this.dataChild);
   }
   ngOnInit(): void {
   }
