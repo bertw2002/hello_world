@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-parent',
@@ -6,9 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./parent.component.css']
 })
 export class ParentComponent implements OnInit {
+  data:string[];
+  sub:any;
+  bruh="hello";
+  constructor() {
+    this.data=[];
+  }
 
-  constructor() { }
-
+  addData(data: string){
+    this.data.push(data);
+    console.log(this.data);
+  }
   ngOnInit(): void {
   }
 

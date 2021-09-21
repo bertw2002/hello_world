@@ -1,2 +1,4 @@
-<p>parent works!</p>
-<app-child></app-child>
+<input #data>
+   <button (click)="addData(data.value)">Add</button>
+<p>{{data.value}}</p>
+<app-child [dataChild]="data"></app-child>
