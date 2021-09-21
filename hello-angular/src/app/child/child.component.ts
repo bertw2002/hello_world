@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./child.component.css']
 })
 export class ChildComponent implements OnInit {
-
-  constructor() { }
+  data:any;
+  constructor() {
+    this.data=[4,5,6];
+  }
 
   ngOnInit(): void {
   }
