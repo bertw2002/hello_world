@@ -2,6 +2,7 @@ import { Component} from '@angular/core';
 import {Router} from '@angular/router';
 import { ParentComponent } from './parent/parent.component';
 import { CalculatorComponent } from './calculator/calculator.component';
+import { CalcmainComponent } from './calcmain/calcmain.component';
 import { NgModule } from '@angular/core';
 
 
@@ -18,7 +19,7 @@ export class AppComponent {
     this.router.navigate(['Parent']);
   }
   redirectCalculator(){
-    this.router.navigate(['Calculator']);
+    this.router.navigate(['Calcmain']);
   }
 
 

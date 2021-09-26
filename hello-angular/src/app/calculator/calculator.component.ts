@@ -13,110 +13,19 @@ import { NgModule } from '@angular/core';
   ]),]
 })
 export class CalculatorComponent implements OnInit {
-  public secondOp=false;
+  public secondOp = false;
   public operator:string;
-  public num1=0;
-  public num2=0;
-  public numDisplay=0;
+  public num1 = 0;
+  public num2 = 0;
+  public numDisplay = 0;
   public num3:number;
   public arr_num:number[] = [];
-  add0(){
+  add(num: number){
     if (this.secondOp){
-      this.num2=this.num2*10;
+      this.num2=this.num2*10+num;
       this.numDisplay=this.num2;
-    }
-    else{
-      this.num1=this.num1*10;
-      this.numDisplay=this.num1;
-    }
-  }
-  add1(){
-    if (this.secondOp){
-      this.num2=this.num2*10+1;
-      this.numDisplay=this.num2;
-    }
-    else{
-      this.num1=this.num1*10+1;
-      this.numDisplay=this.num1;
-    }
-  }
-  add2(){
-    if (this.secondOp){
-      this.num2=this.num2*10+2;
-      this.numDisplay=this.num2;
-    }
-    else{
-      this.num1=this.num1*10+2;
-      this.numDisplay=this.num1;
-    }
-  }
-  add3(){
-    if (this.secondOp){
-      this.num2=this.num2*10+3;
-      this.numDisplay=this.num2;
-    }
-    else{
-      this.num1=this.num1*10+3;
-      this.numDisplay=this.num1;
-    }
-  }
-  add4(){
-    if (this.secondOp){
-      this.num2=this.num2*10+4;
-      this.numDisplay=this.num2;
-    }
-    else{
-      this.num1=this.num1*10+4;
-      this.numDisplay=this.num1;
-    }
-  }
-  add5(){
-    if (this.secondOp){
-      this.num2=this.num2*10+5;
-      this.numDisplay=this.num2;
-    }
-    else{
-      this.num1=this.num1*10+5;
-      this.numDisplay=this.num1;
-    }
-  }
-  add6(){
-    if (this.secondOp){
-      this.num2=this.num2*10+6;
-      this.numDisplay=this.num2;
-    }
-    else{
-      this.num1=this.num1*10+6;
-      this.numDisplay=this.num1;
-    }
-  }
-  add7(){
-    if (this.secondOp){
-      this.num2=this.num2*10+7;
-      this.numDisplay=this.num2;
-    }
-    else{
-      this.num1=this.num1*10+7;
-      this.numDisplay=this.num1;
-    }
-  }
-  add8(){
-    if (this.secondOp){
-      this.num2=this.num2*10+8;
-      this.numDisplay=this.num2;
-    }
-    else{
-      this.num1=this.num1*10+8;
-      this.numDisplay=this.num1;
-    }
-  }
-  add9(){
-    if (this.secondOp){
-      this.num2=this.num2*10+9;
-      this.numDisplay=this.num2;
-    }
-    else{
-      this.num1=this.num1*10+9;
+    }else{
+      this.num1=this.num1*10+num;
       this.numDisplay=this.num1;
     }
   }

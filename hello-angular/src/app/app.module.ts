@@ -8,6 +8,7 @@ import {ExpandComponent} from './expand/expand.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { CalculatorComponent } from './calculator/calculator.component';
+import { CalcmainComponent } from './calcmain/calcmain.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { CalculatorComponent } from './calculator/calculator.component';
     ParentComponent,
     ChildComponent,
     CalculatorComponent,
+    CalcmainComponent,
   ],
   imports: [
     BrowserModule,
