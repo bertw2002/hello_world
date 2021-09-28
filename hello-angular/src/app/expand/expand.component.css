@@ -1,8 +1,4 @@
-.container{
-  background-color: salmon;
-  width: 100%;
-  font-size: 50px;
-}
+
 
 .aHeader{
   background-color: #7e9a9a;
@@ -11,7 +7,7 @@
 }
 
 .aHeader:hover{
-  background-color: lightgreen;
+  background-color: gray;
 }
 
 .abody{
