@@ -6,17 +6,23 @@
   <base href="/">
 </head>
 <body>
-  <div class="column">
+  <div class="columns">
     <div class="column">
       First col
     </div>
     <div class="column">
       second col
     </div>
+    <div class="column">
+      third col
+    </div>
+    <div class="column">
+      fourth col
+    </div>
+
   </div>
-  <button class="button is-light"> BUTTON </button>
-  <button class="main" type='button' (click)="redirectParent()">Redirect to parent component</button>
-  <button class="main1" type='button' (click)="redirectCalculator()">Redirect to calc component</button>
+  <button class="button is-dark" type='button' (click)="redirectParent()">Redirect to parent component</button>
+  <button class="button is-dark" type='button' (click)="redirectCalculator()">Redirect to calc component</button>
 </body>
 </html>
 

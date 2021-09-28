@@ -15,9 +15,6 @@ export class ChildComponent implements OnInit {
   addData(data: string){
     this.dataChild.push(data);
   }
-  sendParent(){
-    this.toParent.emit(this.dataChild);
-  }
   ngOnInit(): void {
   }
 

@@ -5,36 +5,44 @@
   <base href="/">
 </head>
 <body>
-  <div class="header">
-    <h1>Calculator</h1>
-  </div>
-  <div style="text-align:center" class="main">
-    <h2 id="box">{{numDisplay}}</h2>
-    <br>
-    <div id="box1" class="calcButtons">
-
-      <input type='button' value="1" (click)="add(1)">
-      <button type='button' (click)="add(2)">2</button>
-      <button type='button' (click)="add(3)">3</button>
-      <button type='button' (click)="add(4)">4</button>
-      <button type='button' (click)="add(5)">5</button>
-      <button type='button' (click)="add(6)">6</button>
-      <button type='button' (click)="add(7)">7</button>
-      <button type='button' (click)="add(8)">8</button>
-      <button type='button' (click)="add(9)">9</button>
-      <button type='button' (click)="add(10)">0</button>
-      <button type='button' (click)="addSub()">Subtract</button>
-      <button type='button' (click)="addAdd()">Add</button>
-      <button type='button' (click)="addMult()">Multiply</button>
-      <button type='button' (click)="addDiv()">Divide</button>
-      <button type='button' (click)="calculate()">=</button>
+  <br>
+  <br>
+  <div class="columns is-two-thirds" >
+    <div class="column">
+      <h2 id="boxes">{{numDisplay}}</h2>
+      <div class="columns">
+        <div class="column">
+          <button type='button' (click)="add(1)">1</button>
+          <button type='button' (click)="add(2)">2</button>
+          <button type='button' (click)="add(3)">3</button>
+        </div>
+        <div class="column">
+          <button type='button' (click)="add(4)">4</button>
+          <button type='button' (click)="add(5)">5</button>
+          <button type='button' (click)="add(6)">6</button>
+        </div>
+        <div class="column">
+          <button type='button' (click)="add(7)">7</button>
+          <button type='button' (click)="add(8)">8</button>
+          <button type='button' (click)="add(9)">9</button>
+        </div>
+        <div class="column">
+          <button type='button' (click)="add(10)">0</button>
+          <button type='button' (click)="addSub()">Subtract</button>
+          <button type='button' (click)="addAdd()">Add</button>
+        </div>
+        <div class="column">
+          <button type='button' (click)="addMult()">Multiply</button>
+          <button type='button' (click)="addDiv()">Divide</button>
+          <button type='button' (click)="calculate()">=</button>
+        </div>
+      </div>
     </div>
-
-    <br>
-    <app-expand>
-      <p style="white-space: pre-wrap;">{{arr_num}}</p>
-    </app-expand>
   </div>
+  <br>
+  <app-expand>
+    <p style="white-space: pre-wrap;">{{arr_num}}</p>
+  </app-expand>
 </body>
 </html>
 
