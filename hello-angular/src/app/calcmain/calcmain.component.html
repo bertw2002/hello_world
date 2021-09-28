@@ -3,9 +3,16 @@
   <h1>Calculators</h1>
 </div>
 <div class="columns">
-  <div *ngFor="let number of [0,1,2]" class="column">
+  <div class="column is-1.5">
+  </div>
+  <div *ngFor="let number of [0,1,2]" class="column is-3">
     <app-calculator></app-calculator>
     <app-calculator></app-calculator>
     <app-calculator></app-calculator>
   </div>
+  <div class="column is-1.5">
+  </div>
 </div>
+<app-expand>
+  <p style="white-space: pre-wrap;"></p>
+</app-expand>

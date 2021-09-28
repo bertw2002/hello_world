@@ -1,8 +1,5 @@
 .container{
   background-color: salmon;
-  position: absolute;
-  top: 750px;
-  right: 0;
   width: 100%;
   font-size: 50px;
 }

@@ -1,16 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { animate, state, style, transition, trigger } from '@angular/animations';
 import { NgModule } from '@angular/core';
 
 @Component({
   selector: 'app-calculator',
   templateUrl: './calculator.component.html',
   styleUrls: ['./calculator.component.css'],
-  animations: [trigger('panelState', [
-    state('closed', style({height:'32px', overflow: 'hidden'})),
-    state('open', style({height: '*'})),
-    transition('closed <=> open', animate('300ms ease-in-out')),
-  ]),]
 })
 export class CalculatorComponent implements OnInit {
   public secondOp = false;
