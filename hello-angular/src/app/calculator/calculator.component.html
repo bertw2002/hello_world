@@ -12,29 +12,26 @@
       <h2 id="boxes">{{numDisplay}}</h2>
       <div class="columns">
         <div class="column">
-          <button type='button' (click)="add(1)">1</button>
-          <button type='button' (click)="add(2)">2</button>
-          <button type='button' (click)="add(3)">3</button>
+          <button class='button is-normal is-light is-fullwidth is-focused' (click)="add(1)">1</button> <br>
+          <button class='button is-normal is-light is-fullwidth' (click)="add(4)">2</button> <br>
+          <button class='button is-normal is-light is-fullwidth' (click)="add(7)">3</button> <br>
+          <button class='button is-normal is-light is-fullwidth' (click)="add(10)">0</button> <br>
+          <button class='button is-normal is-light is-fullwidth' (click)="addMult()">Multiply</button>
         </div>
         <div class="column">
-          <button type='button' (click)="add(4)">4</button>
-          <button type='button' (click)="add(5)">5</button>
-          <button type='button' (click)="add(6)">6</button>
+          <button class='button is-normal is-light is-fullwidth' (click)="add(2)">4</button> <br>
+          <button class='button is-normal is-light is-fullwidth' (click)="add(5)">5</button> <br>
+          <button class='button is-normal is-light is-fullwidth' (click)="add(8)">6</button> <br>
+          <button class='button is-normal is-light is-fullwidth' (click)="addSub()">Subtract</button> <br>
+          <button class='button is-normal is-light is-fullwidth' (click)="addDiv()">Divide</button>
         </div>
         <div class="column">
-          <button type='button' (click)="add(7)">7</button>
-          <button type='button' (click)="add(8)">8</button>
-          <button type='button' (click)="add(9)">9</button>
-        </div>
-        <div class="column">
-          <button type='button' (click)="add(10)">0</button>
-          <button type='button' (click)="addSub()">Subtract</button>
-          <button type='button' (click)="addAdd()">Add</button>
-        </div>
-        <div class="column">
-          <button type='button' (click)="addMult()">Multiply</button>
-          <button type='button' (click)="addDiv()">Divide</button>
-          <button type='button' (click)="calculate()">=</button>
+          <button class='button is-normal is-light is-fullwidth' (click)="add(3)">7</button> <br>
+          <button class='button is-normal is-light is-fullwidth' (click)="add(6)">8</button> <br>
+          <button class='button is-normal is-light is-fullwidth' (click)="add(9)">9</button> <br>
+          <button class='button is-normal is-light is-fullwidth' (click)="addAdd()">Add</button> <br>
+          <button class='button is-normal is-light is-fullwidth' (click)="calculate()">=</button>
+
         </div>
       </div>
     </div>

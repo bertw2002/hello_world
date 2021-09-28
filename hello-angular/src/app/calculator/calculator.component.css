@@ -9,19 +9,7 @@
 }
 
 #boxes1 {
-  width: 468px;
-  height: 200px;
-  position: absolute;
-
-  left: 30%;
-  top: 140%;
   border: 5px solid gray;
-  margin: 0;
-  text-align: center;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-  padding: 16px;
 }
 
 #answer {

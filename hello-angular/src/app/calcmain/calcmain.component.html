@@ -3,17 +3,7 @@
   <h1>Calculators</h1>
 </div>
 <div class="columns">
-  <div class="column">
-    <app-calculator></app-calculator>
-    <app-calculator></app-calculator>
-    <app-calculator></app-calculator>
-  </div>
-  <div class="column">
-    <app-calculator></app-calculator>
-    <app-calculator></app-calculator>
-    <app-calculator></app-calculator>
-  </div>
-  <div class="column">
+  <div *ngFor="let number of [0,1,2]" class="column">
     <app-calculator></app-calculator>
     <app-calculator></app-calculator>
     <app-calculator></app-calculator>
